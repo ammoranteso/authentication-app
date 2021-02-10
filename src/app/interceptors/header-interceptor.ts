@@ -3,11 +3,17 @@ import { HttpInterceptor, HttpEvent, HttpHandler, HttpRequest } from '@angular/c
 import { Observable } from 'rxjs';
 import { LocalStorageService } from '@services/localStorage/local-storage.service';
 
+/**
+ * All documentation stuff
+ */
 @Injectable({
   providedIn: 'root',
 })
 export class HeadersInterceptor implements HttpInterceptor {
   constructor(private readonly localStorageService: LocalStorageService) { }
+  /**
+   * All documentation stuff
+   */
   intercept(
     req: HttpRequest<any>,
     next: HttpHandler): Observable<HttpEvent<any>> {

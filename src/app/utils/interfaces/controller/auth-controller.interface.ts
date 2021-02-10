@@ -1,15 +1,19 @@
-import { HttpResponse } from "@angular/common/http";
-import { ILoginUser } from "@domain/model/interfaces";
-import { Observable } from "rxjs";
-import { IFacadeApiMap } from "../auxiliary/facade-api-map.interface";
-
+import { ILoginUser } from '@domain/model/interfaces';
+import { Observable } from 'rxjs';
 /**
- * TODO: Document IAuthController purpose
+ * All documentation stuff
  */
 export interface IAuthController {
 
+  /**
+   * All documentation stuff
+   * @param user All documentation stuff
+   */
   login(user: Partial<ILoginUser>): Observable<any> | void;
 
+  /**
+   * All documentation stuff
+   * @param token All documentation stuff
+   */
   refreshToken(token: string): Observable<any> | Observable<boolean>;
-
 }

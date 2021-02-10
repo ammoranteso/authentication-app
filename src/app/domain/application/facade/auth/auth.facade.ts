@@ -6,9 +6,8 @@ import { map } from 'rxjs/operators';
 import { LocalStorageService } from '@services/localStorage/local-storage.service';
 import { ILoginUser } from '@domain/model/interfaces/login-user.interface';
 
-
 /**
- * TODO: Document AuthFacade purpose
+ * All documentation required
  */
 @Injectable({
   providedIn: 'root'
@@ -19,6 +18,10 @@ export class AuthFacade implements IAuthController {
     private readonly api: AuthApiService,
     private readonly localStorage: LocalStorageService
   ) { }
+
+  /**
+   * All documentation required
+   */
   login(user: Partial<ILoginUser>): Observable<boolean> {
     return this.api.login(user).pipe(
       map((response) => {
@@ -36,9 +39,11 @@ export class AuthFacade implements IAuthController {
       })
     );
   }
+  /**
+   * All documentation required
+   * @param token All documentation stuff
+   */
   refreshToken(token: string): Observable<any> | Observable<boolean> {
     throw new Error('Method not implemented.');
   }
-
-
 }

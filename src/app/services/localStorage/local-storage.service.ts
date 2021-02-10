@@ -1,14 +1,17 @@
 import { Injectable } from '@angular/core';
 
+/**
+ * All documentation stuff
+ */
 @Injectable({
   providedIn: 'root'
 })
 export class LocalStorageService {
 
   /**
- * Set JWT Auth Token on localStorage.
- * @param token Value of Token
- */
+   * Set JWT Auth Token on localStorage.
+   * @param token Value of Token
+   */
   setToken(token: string | null): void {
     if (token) {
       localStorage.setItem('token', token);
@@ -25,8 +28,8 @@ export class LocalStorageService {
     }
   }
   /**
- * Get the token
- */
+   * Get the token
+   */
   get token(): string | null {
     return localStorage.getItem('token');
   }

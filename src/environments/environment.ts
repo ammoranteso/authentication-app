@@ -2,6 +2,9 @@
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+/**
+ * All documentation stuff
+ */
 export const environment = {
   production: false,
   apiUrl: 'https://lavalotu.ue.r.appspot.com/api',
